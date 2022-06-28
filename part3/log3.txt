@@ -1,0 +1,560 @@
+==5250== Memcheck, a memory error detector
+==5250== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==5250== Using Valgrind-3.13.0 and LibVEX; rerun with -h for copyright info
+==5250== Command: ./bank input-1.txt
+==5250== 
+===============================================================================================
+===============================================================================================
+Worker Thread: created but waiting
+	_BANKER_ Thread: created but waiting
+Worker Thread: created but waiting
+Worker Thread: created but waiting
+Worker Thread: created but waiting
+Worker Thread: created but waiting
+Worker Thread: created but waiting
+Worker Thread: created but waiting
+Worker Thread: created but waiting
+Worker Thread: created but waiting
+Worker Thread: created but waiting
+
+
+(╯°□°）╯︵ ┻━┻       BARRIER       ┻━┻ ︵ ヽ(°□°ヽ)
+===============================================================================================
+===============================================================================================
+
+The main thread will release the barrier in 5 seconds, signaling the worker threads and banker thread to start working.
+
+
+Worker Thread: started working
+Worker Thread: started working
+	_BANKER_ Thread: started working
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: started working
+Worker Thread: started working
+Worker Thread: started working
+Worker Thread: started working
+Worker Thread: started working
+Worker Thread: started working
+Worker Thread: started working
+Worker Thread: started working
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=10 | alive_threads=10
+
+---------------------------------------------------------------------------------
+**************ALL 10 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=5000 | alive_threads=10 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=2768 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=2920 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=10
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=5003 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5004 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5004 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5007 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=10 | alive_threads=10
+
+---------------------------------------------------------------------------------
+**************ALL 10 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=10000 | alive_threads=10 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=103 | alive_threads=10
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=103 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=379 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=4564 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=4877 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=10 | alive_threads=10
+
+---------------------------------------------------------------------------------
+**************ALL 10 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=15000 | alive_threads=10 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=146 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=479 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=479 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=479 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=479 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=479 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=479 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=479 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=479 | alive_threads=10
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=10 | alive_threads=10
+
+---------------------------------------------------------------------------------
+**************ALL 10 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=20000 | alive_threads=10 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=148 | alive_threads=10
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=295 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=449 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5004 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5006 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5007 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5008 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=10 | alive_threads=10
+
+---------------------------------------------------------------------------------
+**************ALL 10 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=25000 | alive_threads=10 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5003 | alive_threads=10
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=5003 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5003 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5006 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=10 | alive_threads=10
+
+---------------------------------------------------------------------------------
+**************ALL 10 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=30000 | alive_threads=10 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5002 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5003 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=10
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=5004 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5004 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5006 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5006 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=10 | alive_threads=10
+
+---------------------------------------------------------------------------------
+**************ALL 10 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=35000 | alive_threads=10 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=140 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=10
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=5006 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=10
+Worker Thread: Paused. | waiting_thread_count=10 | alive_threads=10
+
+---------------------------------------------------------------------------------
+**************ALL 10 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=40000 | alive_threads=10 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=10
+Worker Thread: finished processing this threads entire workload.
+Worker Thread: received a wake-up signal. | counter=51 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5002 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5003 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5006 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=9
+
+---------------------------------------------------------------------------------
+**************ALL 9 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=45000 | alive_threads=9 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=9
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=545 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=693 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=849 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=849 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5003 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5004 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=9 | alive_threads=9
+
+---------------------------------------------------------------------------------
+**************ALL 9 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=50000 | alive_threads=9 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=9
+Worker Thread: received a wake-up signal. | counter=2980 | alive_threads=9
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=9
+Worker Thread: finished processing this threads entire workload.
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=9
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=8
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=8
+Worker Thread: received a wake-up signal. | counter=5002 | alive_threads=8
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=8
+Worker Thread: received a wake-up signal. | counter=5003 | alive_threads=8
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=8
+Worker Thread: received a wake-up signal. | counter=5004 | alive_threads=8
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=8
+Worker Thread: received a wake-up signal. | counter=5005 | alive_threads=8
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=8
+Worker Thread: received a wake-up signal. | counter=5006 | alive_threads=8
+Worker Thread: Paused. | waiting_thread_count=8 | alive_threads=8
+
+---------------------------------------------------------------------------------
+**************ALL 8 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=55000 | alive_threads=8 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=8
+Worker Thread: received a wake-up signal. | counter=61 | alive_threads=8
+Worker Thread: received a wake-up signal. | counter=214 | alive_threads=8
+Worker Thread: finished processing this threads entire workload.
+Worker Thread: received a wake-up signal. | counter=3769 | alive_threads=7
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=4001 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=4174 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=4773 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=5004 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=7
+
+---------------------------------------------------------------------------------
+**************ALL 7 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=60000 | alive_threads=7 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=5002 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=5003 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=5004 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=7
+Worker Thread: Paused. | waiting_thread_count=7 | alive_threads=7
+
+---------------------------------------------------------------------------------
+**************ALL 7 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=65000 | alive_threads=7 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=7
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=141 | alive_threads=7
+Worker Thread: received a wake-up signal. | counter=141 | alive_threads=7
+Worker Thread: finished processing this threads entire workload.
+Worker Thread: received a wake-up signal. | counter=2050 | alive_threads=6
+Worker Thread: received a wake-up signal. | counter=2051 | alive_threads=6
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=6
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=6
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=6
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=6
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=6
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=6
+Worker Thread: Paused. | waiting_thread_count=5 | alive_threads=6
+Worker Thread: Paused. | waiting_thread_count=6 | alive_threads=6
+
+---------------------------------------------------------------------------------
+**************ALL 6 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=70000 | alive_threads=6 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=6
+Worker Thread: received a wake-up signal. | counter=150 | alive_threads=6
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=546 | alive_threads=6
+Worker Thread: received a wake-up signal. | counter=704 | alive_threads=6
+Worker Thread: received a wake-up signal. | counter=889 | alive_threads=6
+Worker Thread: finished processing this threads entire workload.
+Worker Thread: received a wake-up signal. | counter=3377 | alive_threads=5
+Worker Thread: finished processing this threads entire workload.
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=4
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=4
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=4
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=4
+
+---------------------------------------------------------------------------------
+**************ALL 4 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=75000 | alive_threads=4 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=4
+Worker Thread: received a wake-up signal. | counter=158 | alive_threads=4
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=4
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=5000 | alive_threads=4
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=4
+Worker Thread: received a wake-up signal. | counter=5001 | alive_threads=4
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=4
+Worker Thread: Paused. | waiting_thread_count=4 | alive_threads=4
+
+---------------------------------------------------------------------------------
+**************ALL 4 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=80000 | alive_threads=4 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=4
+Worker Thread: finished processing this threads entire workload.
+Worker Thread: received a wake-up signal. | counter=2516 | alive_threads=3
+Worker Thread: received a wake-up signal. | counter=2516 | alive_threads=3
+Worker Thread: received a wake-up signal. | counter=2964 | alive_threads=3
+Worker Thread: Paused. | waiting_thread_count=1 | alive_threads=3
+Worker Thread: Paused. | waiting_thread_count=2 | alive_threads=3
+Worker Thread: Paused. | waiting_thread_count=3 | alive_threads=3
+
+---------------------------------------------------------------------------------
+**************ALL 3 alive_threads NOW WAITING, waking bank in 2 seconds**************
+---------------------------------------------------------------------------------
+
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=85000 | alive_threads=3 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+Worker Thread: received a wake-up signal. | counter=0 | alive_threads=3
+	_BANKER_ Thread: waiting for wake-up signal
+Worker Thread: received a wake-up signal. | counter=154 | alive_threads=3
+Worker Thread: finished processing this threads entire workload.
+Worker Thread: finished processing this threads entire workload.
+Worker Thread: received a wake-up signal. | counter=3154 | alive_threads=1
+Worker Thread: finished processing this threads entire workload.
+	_BANKER_ Thread: recieved a wake-up signal. Factoring in account reward incentives in 3 seconds
+
+	Total transactions processed=90000 | alive_threads=0 
+
+	_BANKER_ Thread: done with another round of updates, waking up workers in 3 seconds
+
+---------------------------------------------------------------------------------------------
+==5250== 
+==5250== HEAP SUMMARY:
+==5250==     in use at exit: 0 bytes in 0 blocks
+==5250==   total heap usage: 1,000,524 allocs, 1,000,524 frees, 35,385,174 bytes allocated
+==5250== 
+==5250== All heap blocks were freed -- no leaks are possible
+==5250== 
+==5250== For counts of detected and suppressed errors, rerun with: -v
+==5250== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
